@@ -33,27 +33,14 @@
         </mat-grid-list>
 
         <mat-grid-list cols="4" rowHeight="60px">
-          <mat-grid-tile [colspan]="4" [rowspan]="1">
-            <mat-select placerholder="Season" id="season" name="season" [(ngModel)]="newJersey.season">
+          <mat-grid-tile [colspan]="2" [rowspan]="1">
+            <mat-select placeholder="Season" id="season" name="season" [(ngModel)]="newJersey.season">
               <mat-option value="16/17">16/17</mat-option>
               <mat-option value="17/18">17/18</mat-option>
             </mat-select>
           </mat-grid-tile>
-        </mat-grid-list>
-
-        <mat-grid-list cols="4" rowHeight="60px">
           <mat-grid-tile [colspan]="2" [rowspan]="1">
-            <mat-select placerholder="Size" id="size" name="size" [(ngModel)]="newJersey.size">
-              <mat-option value="xs">XS</mat-option>
-              <mat-option value="small">Small</mat-option>
-              <mat-option value="medium">Medium</mat-option>
-              <mat-option value="large">Large</mat-option>
-              <mat-option value="XLarge">X-Large</mat-option>
-              <mat-option value="XXLarge">XX-Large</mat-option>
-            </mat-select>
-          </mat-grid-tile>
-          <mat-grid-tile [colspan]="2" [rowspan]="1">
-            <mat-select placerholder="Type" id="type" name="type" [(ngModel)]="newJersey.type">
+            <mat-select placeholder="Type" id="type" name="type" [(ngModel)]="newJersey.type">
               <mat-option value="replica">Replica</mat-option>
               <mat-option value="authentic">Authentic</mat-option>
             </mat-select>
@@ -75,7 +62,7 @@
 
         <mat-grid-list cols="4" rowHeight="60px">
           <mat-grid-tile [colspan]="4" [rowspan]="1">
-            <mat-select placerholder="Shipping Weight" id="shippingWeight" name="shippingWeight" [(ngModel)]="newJersey.shippingWeight">
+            <mat-select placeholder="Shipping Weight" id="shippingWeight" name="shippingWeight" [(ngModel)]="newJersey.shippingWeight">
               <mat-option value="short">0.3</mat-option>
               <mat-option value="long">0.5</mat-option>
             </mat-select>

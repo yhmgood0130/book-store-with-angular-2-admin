@@ -12,12 +12,12 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 import 'hammerjs';
 
+import { LoginService } from './services/login.service';
+import { AddJerseyService } from './services/add-jersey.service'
 
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { LoginComponent } from './components/login/login.component';
-
-import { LoginService } from './services/login.service';
 import { AddNewJerseyComponent } from './components/add-new-jersey/add-new-jersey.component';
 
 @NgModule({
@@ -42,7 +42,8 @@ import { AddNewJerseyComponent } from './components/add-new-jersey/add-new-jerse
     MatSlideToggleModule
   ],
   providers: [
-    LoginService
+    LoginService,
+    AddJerseyService
   ],
   bootstrap: [AppComponent]
 })
