@@ -4,9 +4,11 @@ import { FormsModule } from "@angular/forms";
 import { HttpModule } from "@angular/http";
 import { routing } from "./app.routing";
 import { MatButtonModule,MatToolbarModule, MatCheckboxModule } from '@angular/material';
+import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 import 'hammerjs';
 
@@ -16,12 +18,14 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { LoginComponent } from './components/login/login.component';
 
 import { LoginService } from './services/login.service';
+import { AddNewJerseyComponent } from './components/add-new-jersey/add-new-jersey.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
-    LoginComponent
+    LoginComponent,
+    AddNewJerseyComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +37,9 @@ import { LoginService } from './services/login.service';
     MatGridListModule,
     MatCheckboxModule,
     MatToolbarModule,
-    MatInputModule
+    MatSelectModule,
+    MatInputModule,
+    MatSlideToggleModule
   ],
   providers: [
     LoginService

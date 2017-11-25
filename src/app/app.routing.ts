@@ -1,6 +1,7 @@
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
+import { AddNewJerseyComponent } from './components/add-new-jersey/add-new-jersey.component';
 
 const appRoutes: Routes =  [
     {
@@ -11,6 +12,10 @@ const appRoutes: Routes =  [
     {
         path: 'login',
         component: LoginComponent
+    },
+    {
+        path: 'addNewJersey',
+        component: AddNewJerseyComponent
     }
 ];
 
