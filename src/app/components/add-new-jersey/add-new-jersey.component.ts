@@ -19,8 +19,8 @@ export class AddNewJerseyComponent implements OnInit {
       res => {
         this.jerseyAdded=true;
         this.newJersey = new Jersey();
-        this.newJersey.shippingWeight="short";
-        this.newJersey.type="replica";
+        this.newJersey.shippingWeight=0.3;
+        this.newJersey.type="Replica";
         this.newJersey.active=true;
         this.newJersey.season="17/18";
       }, error => {
@@ -31,8 +31,8 @@ export class AddNewJerseyComponent implements OnInit {
 
   ngOnInit() {
     this.jerseyAdded=false;
-    this.newJersey.shippingWeight="short";
-    this.newJersey.type="replica";
+    this.newJersey.shippingWeight=0.3;
+    this.newJersey.type="Replica";
     this.newJersey.active=true;
     this.newJersey.season="17/18";
   }

@@ -8,6 +8,7 @@ export class AddJerseyService {
   constructor(private http: Http) { }
 
   sendJersey(jersey: Jersey){
+    console.log(jersey);
     let url ="http://localhost:8181/jersey/add";
     let headers = new Headers ({
         'content-type': 'application/json',
