@@ -25,7 +25,7 @@ export class NavBarComponent implements OnInit {
       },
       error => {
         console.log(error);
-      }
+      },
       this.router.navigate(['/']);
     );
 

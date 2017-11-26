@@ -10,10 +10,12 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
+
 import 'hammerjs';
 
 import { LoginService } from './services/login.service';
-import { AddJerseyService } from './services/add-jersey.service'
+import { AddJerseyService } from './services/add-jersey.service';
+import { UploadImageService } from './services/upload-image.service';
 
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
@@ -43,7 +45,8 @@ import { AddNewJerseyComponent } from './components/add-new-jersey/add-new-jerse
   ],
   providers: [
     LoginService,
-    AddJerseyService
+    AddJerseyService,
+    UploadImageService
   ],
   bootstrap: [AppComponent]
 })
