@@ -16,18 +16,21 @@ import 'hammerjs';
 import { LoginService } from './services/login.service';
 import { AddJerseyService } from './services/add-jersey.service';
 import { UploadImageService } from './services/upload-image.service';
+import { GetJerseyListService } from './services/get-jersey-list.service';
 
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { LoginComponent } from './components/login/login.component';
 import { AddNewJerseyComponent } from './components/add-new-jersey/add-new-jersey.component';
+import { JerseyListComponent } from './components/jersey-list/jersey-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
     LoginComponent,
-    AddNewJerseyComponent
+    AddNewJerseyComponent,
+    JerseyListComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +49,8 @@ import { AddNewJerseyComponent } from './components/add-new-jersey/add-new-jerse
   providers: [
     LoginService,
     AddJerseyService,
-    UploadImageService
+    UploadImageService,
+    GetJerseyListService
   ],
   bootstrap: [AppComponent]
 })

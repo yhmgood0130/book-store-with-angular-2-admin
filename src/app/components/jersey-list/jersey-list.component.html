@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="table-responsive" style="margin-top: 30px;">
+    <table id="jerseyListTable" class="table bordered highlight">
+      <thead>
+        <tr>
+          <th>
+            <input type="checkbox" (change)="updateSelected($event.target.checked)" />
+          </th>
+          <th>Title</th>
+          <th>Team</th>
+          <th>League</th>
+          <th>Country</th>
+          <th>List Price</th>
+          <th>Our Price</th>
+          <th>Active?</th>
+          <th>Operation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor = "let jersey of jerseyList">
+          <td>
+          <input hidden="hidden" name="id" />
+          <input hidden="checkbox" [checked]="allChecked" (change)="updateRemoveJerseyList($event.target.checked, jersey)"  />
+         </td>
+         <td><a (click)="onSelect(jersey)" style="cursor:pointer">
+          {{jersey.title}}</a></td>
+          <td>{{jersey.team}}</td>
+          <td>{{jersey.league}}</td>
+          <td>{{jersey.country}}</td>
+          <td>{{jersey.listPrice}}</td>
+          <td>{{jersey.ourPrice}}</td>
+          <td>{{jersey.active}}</td>
+          <td>
+            <input hidden="hidden" name="id" />
+            <button mat-button (click)="openDialog(jersey)" value="delete">
+              <span class="fa fa-times"></span> delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <button mat-raised-button color="warn" id="deleteSelected" (click)="removeSelectedJerseys()">Delete Selected</button>
+</div>
