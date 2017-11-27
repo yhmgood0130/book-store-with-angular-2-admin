@@ -1,0 +1,47 @@
+<div class="container">
+  <div style="margin-top:20px;">
+    <a routerLink="/jerseyList"><i class="fa fa-long-arrow-left"></i> Go Back </a>
+    <span> / </span>
+    <a (click)="onSelect(jersey)" style="cursor: pointer"> Edit </a>
+    <mat-grid-list cols="9" rowHeight="100px">
+      <mat-grid-tile [colspan]="3" [rowspan]="6">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <img [src]="'http://localhost:8181/image/jersey/' + jersey.id + '.png'" class="responsive-img" />
+          </div>
+        </div>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="6">
+        <h3>{{jersey.title}}</h3>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="3" [rowspan]="4">
+        <mat-list>
+          <mat-list-item>
+            <p><strong>Team: </strong>{{jersey.team}}</p>
+          </mat-list-item>
+          <mat-list-item>
+            <p><strong>League: </strong>{{jersey.league}}</p>
+          </mat-list-item>
+          <mat-list-item>
+            <p><strong>Country: </strong>{{jersey.country}}</p>
+          </mat-list-item>
+          <mat-list-item>
+            <p><strong>List Price: </strong>{{jersey.listPrice}}</p>
+          </mat-list-item>
+          <mat-list-item>
+            <p><strong>Our Price: </strong>{{jersey.ourPrice}}</p>
+          </mat-list-item>
+          <mat-list-item>
+            <p><strong>Number in stock: </strong>{{jersey.inStockNumber}}</p>
+          </mat-list-item>
+          <mat-list-item>
+            <p><strong>Shipping Weight: </strong>{{jersey.shippingWeight}}</p>
+          </mat-list-item>
+        </mat-list>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="6">
+        <p><strong>Description: </strong>{{jersey.description}}</p>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+</div>

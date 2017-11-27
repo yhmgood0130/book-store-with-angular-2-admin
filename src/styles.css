@@ -1,4 +1,5 @@
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import '~font-awesome/css/font-awesome.min.css';
 
 /* You can add global styles to this file, and also import other style files */
 /*@import '~@angular/material/core/theming/prebuilt/deeppurple-amber.css';*/
@@ -33,7 +34,7 @@ mat-slide-toggle {
 }
 
 .container {
-	width:90%;
+	width:95%;
 	margin:auto;
 }
 

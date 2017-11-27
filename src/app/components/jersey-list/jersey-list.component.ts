@@ -21,6 +21,11 @@ export class JerseyListComponent implements OnInit {
     private router:Router
   ) { }
 
+  onSelect(jersey:Jersey){
+    this.selectedJersey=jersey;
+    this.router.navigate(['/viewJersey', this.selectedJersey.id]);
+  }
+
   ngOnInit() {
     this.getJerseyListService.getJerseyList().subscribe(
       res => {
