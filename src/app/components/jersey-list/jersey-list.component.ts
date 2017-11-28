@@ -3,6 +3,9 @@ import { Jersey } from '../../models/jersey';
 import { Router } from '@angular/router';
 import { LoginService } from ' ../../services/login.service';
 import { GetJerseyListService } from '../../services/get-jersey-list.service';
+import { RemoveJerseyService } from '../../services/remove-jersey.service';
+
+import { MatDialog, MatDialogRef } from '@angular/material';
 
 @Component({
   selector: 'app-jersey-list',
@@ -18,7 +21,9 @@ export class JerseyListComponent implements OnInit {
 
   constructor(
     private getJerseyListService: GetJerseyListService,
-    private router:Router
+    private removeJerseyService: RemoveJerseyService
+    private router:Router,
+    private dialog: MatDialog
   ) { }
 
   onSelect(jersey:Jersey){
@@ -26,7 +31,27 @@ export class JerseyListComponent implements OnInit {
     this.router.navigate(['/viewJersey', this.selectedJersey.id]);
   }
 
-  ngOnInit() {
+  openDialog(jersey: Jersey) {
+    let dialogRef = this.dialog.open(DialogResultExampleDialog);
+    dialogRef.afterClosed().subscribe(
+      result => {
+        console.log(result);
+        if(result =="yes"){
+          this.removeJerseyService.sendJersey(jersey.id).subscribe(
+            res => {
+              console.log(res);
+              this.getJerseyList();
+            },
+            err => {
+              console.log(err);
+            }
+          )
+        }
+      }
+    )
+  }
+
+  getJerseyList() {
     this.getJerseyListService.getJerseyList().subscribe(
       res => {
         console.log(res.json());
@@ -38,4 +63,16 @@ export class JerseyListComponent implements OnInit {
     )
   }
 
+  ngOnInit() {
+    this.getJerseyList();
+  }
+
+}
+
+@Component({
+  selector: 'dialog-result-example-dialog',
+  templateUrl: './dialog-result-example-dialog.html'
+})
+export class DialogResultExampleDialog {
+  constructor(public dialogRef: MatDialogRef<DialogResultExampleDialog>) {}
 }

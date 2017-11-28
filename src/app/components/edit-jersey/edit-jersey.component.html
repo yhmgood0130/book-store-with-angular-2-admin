@@ -1,0 +1,104 @@
+<div class="container">
+  <div [hidden]="jerseyUpdated">
+    <h3 style="margin-top: 30px;">Update Jersey Information
+      <span style="font-size:small">* is a required field</span></h3>
+      <form (submit)="onSubmit()">
+        <mat-grid-list cols="4" rowHeight="65px">
+          <mat-grid-tile [colspan]="4" [rowspan]="1">
+            <mat-input-container>
+              <input matInput id="title" type="text" required [(ngModel)]="jersey.title" name="title" placeholder="Title">
+            </mat-input-container>
+          </mat-grid-tile>
+        </mat-grid-list>
+
+        <mat-grid-list cols="4" rowHeight="65px">
+          <mat-grid-tile [colspan]="2" [rowspan]="1">
+            <mat-input-container>
+              <input matInput id="team" type="text" required [(ngModel)]="jersey.team" name="team" placeholder="Team">
+            </mat-input-container>
+          </mat-grid-tile>
+          <mat-grid-tile [colspan]="2" [rowspan]="1">
+            <mat-input-container>
+              <input matInput id="league" type="text" required [(ngModel)]="jersey.league" name="league" placeholder="League">
+            </mat-input-container>
+          </mat-grid-tile>
+        </mat-grid-list>
+
+        <mat-grid-list cols="4" rowHeight="65px">
+          <mat-grid-tile [colspan]="4" [rowspan]="1">
+            <mat-input-container>
+              <input matInput id="country" type="text" required [(ngModel)]="jersey.country" name="country" placeholder="Country">
+            </mat-input-container>
+          </mat-grid-tile>
+        </mat-grid-list>
+
+        <mat-grid-list cols="4" rowHeight="65px">
+          <mat-grid-tile [colspan]="2" [rowspan]="1">
+            <mat-select placeholder="Season" id="season" name="season" [(ngModel)]="jersey.season">
+              <mat-option value="16/17">16/17</mat-option>
+              <mat-option value="17/18">17/18</mat-option>
+            </mat-select>
+          </mat-grid-tile>
+          <mat-grid-tile [colspan]="2" [rowspan]="1">
+            <mat-select placeholder="Type" id="type" name="type" [(ngModel)]="jersey.type">
+              <mat-option value="Replica">Replica</mat-option>
+              <mat-option value="authentic">Authentic</mat-option>
+            </mat-select>
+          </mat-grid-tile>
+        </mat-grid-list>
+
+        <mat-grid-list cols="4" rowHeight="65px">
+          <mat-grid-tile [colspan]="2" [rowspan]="1">
+            <mat-input-container>
+              <input matInput id="listPrice" type="number" required [(ngModel)]="jersey.listPrice" step="0.01" name="listPrice" placeholder="List Price">
+            </mat-input-container>
+          </mat-grid-tile>
+          <mat-grid-tile [colspan]="2" [rowspan]="1">
+            <mat-input-container>
+              <input matInput id="ourPrice" type="number" required [(ngModel)]="jersey.ourPrice" step="0.01" name="ourPrice" placeholder="Our Price">
+            </mat-input-container>
+          </mat-grid-tile>
+        </mat-grid-list>
+
+        <mat-grid-list cols="4" rowHeight="65px">
+          <mat-grid-tile [colspan]="4" [rowspan]="1">
+            <mat-select placeholder="Shipping Weight" id="shippingWeight" name="shippingWeight" [(ngModel)]="jersey.shippingWeight">
+              <mat-option value="0.3">0.3</mat-option>
+              <mat-option value="0.5">0.5</mat-option>
+            </mat-select>
+          </mat-grid-tile>
+        </mat-grid-list>
+
+        <mat-grid-list cols="4" rowHeight="65px">
+          <mat-grid-tile [colspan]="2" [rowspan]="1">
+            <mat-input-container>
+              <input matInput id="inStockNumber" type="number" required [(ngModel)]="jersey.inStockNumber" step="0.01" name="inStockNumber" placeholder="InStock Number">
+            </mat-input-container>
+          </mat-grid-tile>
+          <mat-grid-tile [colspan]="2" [rowspan]="1">
+            &nbsp;
+            <mat-slide-toggle [color]="color" [checked]="checked" [disabled]="disabled" [(ngModel)]="jersey.active" name="active">Active</mat-slide-toggle>
+          </mat-grid-tile>
+        </mat-grid-list>
+
+        <mat-input-container>
+          <textarea matInput id="description" [(ngModel)]="jersey.description" name="description" placeholder="Description" required></textarea>
+        </mat-input-container>
+        Image &nbsp;
+        <input id="title" type="file" id="jerseyImage" name="jerseyImage" (change)="uploadImageService.fileChangeEvent($event)">
+        <br><br>
+
+        <mat-grid-list cols="20" rowHeight="65px">
+          <mat-grid-tile [colspan]="2" [rowspan]="1">
+            <button color="primary" mat-raised-button type="submit">Update Jersey</button>
+          </mat-grid-tile>
+          <mat-grid-tile [colspan]="2" [rowspan]="1">
+            <a color="warn" mat-raised-button routerLink="/">Cancel</a>
+          </mat-grid-tile>
+        </mat-grid-list>
+      </form>
+  </div>
+  <div class="row" [hidden]="!jerseyUpdated">
+    <h3>Jersey Updated Successfully!</h3>
+  </div>
+</div>

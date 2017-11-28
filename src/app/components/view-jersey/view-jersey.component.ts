@@ -15,12 +15,17 @@ export class ViewJerseyComponent implements OnInit {
 
   constructor(private getJerseyService:GetJerseyService, private route:ActivatedRoute, private router:Router) { }
 
+  onSelect(jersey:Jersey) {
+    this.router.navigate(['/editJersey', this.jersey.id])
+     // .then(s => location.reload());
+  }
+
   ngOnInit() {
     this.route.params.forEach((params:Params) => {
       this.jerseyId = Number.parseInt(params['id']);
     });
 
-    this.getJerseyService.getJersey(this.jerseyId).subscribe(
+    this.getJerseyService.getJersey(this.jersey.id).subscribe(
       res => {
         this.jersey = res.json();
       },

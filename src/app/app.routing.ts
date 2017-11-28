@@ -4,6 +4,7 @@ import { LoginComponent } from './components/login/login.component';
 import { AddNewJerseyComponent } from './components/add-new-jersey/add-new-jersey.component';
 import { JerseyListComponent } from './components/jersey-list/jersey-list.component';
 import { ViewJerseyComponent } from './components/view-jersey/view-jersey.component';
+import { EditJerseyComponent } from './components/edit-jersey/edit-jersey.component';
 
 const appRoutes: Routes =  [
     {
@@ -26,6 +27,10 @@ const appRoutes: Routes =  [
     {
         path: 'viewJersey/:id',
         component: ViewJerseyComponent
+    },
+    {
+        path: 'editJersey/:id',
+        component: EditJerseyComponent
     }
 ];
 

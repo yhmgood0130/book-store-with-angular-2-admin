@@ -17,6 +17,17 @@ export class UploadImageService {
     });
   }
 
+  modify(jerseyId: number){
+    console.log(this.filesToUpload);
+    if (this.filesToUpload.length > 0) {
+      this.makeFileRequest("http://localhost:8181/jersey/update/image?id="+jerseyId, [], this.filesToUpload).then((result) => {
+        console.log(result);
+      }, (error) => {
+        console.log(error);
+      });
+    }
+  }
+
   fileChangeEvent(fileInput: any) {
     this.filesToUpload = <Array<File>> fileInput.target.files;
   }

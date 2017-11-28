@@ -10,6 +10,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatListModule } from '@angular/material/list';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 import 'hammerjs';
@@ -19,13 +20,17 @@ import { AddJerseyService } from './services/add-jersey.service';
 import { UploadImageService } from './services/upload-image.service';
 import { GetJerseyListService } from './services/get-jersey-list.service';
 import { GetJerseyService } from './services/get-jersey.service';
+import { EditJerseyService } from './services/edit-jersey.service';
+import { RemoveJerseyService } from './services/remove-jersey.service';
 
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { LoginComponent } from './components/login/login.component';
 import { AddNewJerseyComponent } from './components/add-new-jersey/add-new-jersey.component';
-import { JerseyListComponent } from './components/jersey-list/jersey-list.component';
+import { JerseyListComponent, DialogResultExampleDialog } from './components/jersey-list/jersey-list.component';
 import { ViewJerseyComponent } from './components/view-jersey/view-jersey.component';
+import { EditJerseyComponent } from './components/edit-jersey/edit-jersey.component';
+
 
 @NgModule({
   declarations: [
@@ -34,7 +39,9 @@ import { ViewJerseyComponent } from './components/view-jersey/view-jersey.compon
     LoginComponent,
     AddNewJerseyComponent,
     JerseyListComponent,
-    ViewJerseyComponent
+    ViewJerseyComponent,
+    EditJerseyComponent,
+    DialogResultExampleDialog
   ],
   imports: [
     BrowserModule,
@@ -49,15 +56,19 @@ import { ViewJerseyComponent } from './components/view-jersey/view-jersey.compon
     MatSelectModule,
     MatInputModule,
     MatSlideToggleModule,
-    MatListModule
+    MatListModule,
+    MatDialogModule
   ],
   providers: [
     LoginService,
     AddJerseyService,
     UploadImageService,
     GetJerseyListService,
-    GetJerseyService
+    GetJerseyService,
+    EditJerseyService,
+    RemoveJerseyService
   ],
+  entryComponents: [ DialogResultExampleDialog ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
