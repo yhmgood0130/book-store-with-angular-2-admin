@@ -25,7 +25,7 @@ export class ViewJerseyComponent implements OnInit {
       this.jerseyId = Number.parseInt(params['id']);
     });
 
-    this.getJerseyService.getJersey(this.jersey.id).subscribe(
+    this.getJerseyService.getJersey(this.jerseyId).subscribe(
       res => {
         this.jersey = res.json();
       },

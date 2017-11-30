@@ -20,7 +20,7 @@
         <tr *ngFor = "let jersey of jerseyList">
           <td>
           <input hidden="hidden" name="id" />
-          <input hidden="checkbox" [checked]="allChecked" (change)="updateRemoveJerseyList($event.target.checked, jersey)"  />
+          <input type="checkbox" [checked]="allChecked" (change)="updateRemoveJerseyList($event.target.checked, jersey)"  />
          </td>
          <td><a (click)="onSelect(jersey)" style="cursor:pointer">
           {{jersey.title}}</a></td>
