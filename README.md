@@ -13,7 +13,7 @@ This repo is for AdminPortal for Soccer-Jersey-Store web application where the a
 
 Front-end - Angular 2, Angular Material, Bootstrap
 
-Back-end - Spring Boot, Eclipse, MySQL, MySQL Workbench, Redis
+Back-end - Java, Spring [ Spring Boot, Spring Security, Spring Data, etc ], Eclipse, MySQL, MySQL Workbench, Redis, JavaMail
 
 ## Links to Server-side & Client-Side
 
