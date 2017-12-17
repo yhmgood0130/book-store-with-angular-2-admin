@@ -16,8 +16,9 @@ Back-end - Spring Boot, Eclipse, MySQL, MySQL Workbench, Redis
 
 ## Links to Server-side & Client-Side
 
-[Server-side Repo](https://github.com/yhmgood0130/soccerjersey-server-with-spring-boot)
-[Client-side Repo](https://github.com/yhmgood0130/soccer-jersey-store-with-angular-2-client)
+- [Server-side Repo](https://github.com/yhmgood0130/soccerjersey-server-with-spring-boot)
+
+- [Client-side Repo](https://github.com/yhmgood0130/soccer-jersey-store-with-angular-2-client)
 
 
 ## License
