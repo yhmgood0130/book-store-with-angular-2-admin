@@ -5,7 +5,8 @@ This repo is for AdminPortal for Soccer-Jersey-Store web application where the a
 ## User Story
 
 - As an admin, I want to add the item for client-side page.
-- As an admin, I want to update the item information for client-side page (ex. Number of InStockItems, Active, picture, description,etc).
+- As an admin, I want to update the item information for client-side page 
+ (ex. Number of InStockItems, Active, picture, description,etc).
 - As an admin, I want to remove the item from the client-side page.
 
 ## Built with
