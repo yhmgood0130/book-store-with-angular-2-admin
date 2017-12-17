@@ -17,7 +17,7 @@ Back-end - Java, Spring [ Spring Boot, Spring Security, Spring Data, etc ], Ecli
 
 ## Links to Server-side & Client-Side
 
-- [Server-side Repo](https://github.com/yhmgood0130/soccerjersey-server-with-spring-boot)
+- [Server-side Repo](https://github.com/yhmgood0130/soccerjersey-server-with-java-spring-framework)
 
 - [Client-side Repo](https://github.com/yhmgood0130/soccer-jersey-store-with-angular-2-client)
 
